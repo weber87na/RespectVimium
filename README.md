@@ -13,5 +13,14 @@
 
 按下 `F` 可以開啟 `easymotion`
 
-當敲下一個字母時, 字會變成紅色
-兩個字時會跳到那個 link
+當敲下 `一個` 字母時, 字會變成紅色
+
+`兩個` 字時會跳到那個 `link`
+
+Usage
+``` js
+const viNavigation = new ViNavigation();
+viNavigation.init();
+```
+
+![title](RespectVimium.gif)
