@@ -34,7 +34,22 @@ class ViNavigation {
 
   viGoBottom(keyPressed) {
     if (keyPressed === "G") {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+      console.log("document.body.scrollHeight", document.body.scrollHeight);
+      let h = Math.max(
+        Math.max(
+          document.body.scrollHeight,
+          document.documentElement.scrollHeight
+        ),
+        Math.max(
+          document.body.offsetHeight,
+          document.documentElement.offsetHeight
+        ),
+        Math.max(
+          document.body.clientHeight,
+          document.documentElement.clientHeight
+        )
+      );
+      window.scrollTo({ top: h, behavior: "smooth" });
     }
   }
 
